@@ -7,7 +7,6 @@ const Navbar = () => {
       <div className="container">
 
         <Link className="navbar-brand fw-bold fs-4 d-flex align-items-center" to="/">
-          <span className="me-2">📚</span>
           <span className="text-warning">Lib</span>Manager
         </Link>
 

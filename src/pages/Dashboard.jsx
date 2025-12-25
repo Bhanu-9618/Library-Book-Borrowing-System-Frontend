@@ -22,14 +22,30 @@ const Dashboard = () => {
 
         <div className="container position-relative h-100 d-flex align-items-center justify-content-center" style={{ zIndex: 2, paddingTop: '100px', paddingBottom: '120px' }}>
           <div className="text-center px-3">
-            <h1 className="display-6 display-md-3 fw-bold mb-3">
+            <h1 className="display-6 display-md-3 fw-bold mb-3"
+              style={{
+                fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+                letterSpacing: '-1px'
+              }}>
               Welcome to <span className="text-warning">LibManager</span>
             </h1>
-            <p className=" mb-4 mx-auto opacity-90" style={{ maxWidth: '700px', fontWeight: 'bold', fontSize: "20px", fontFamily: "cursive" }}>
-              " Elevate your library experience. Manage collections, track members, and handle borrowings with a seamless interface."
+
+            <p className="mb-4 mx-auto opacity-90"
+              style={{
+                maxWidth: '700px',
+                fontWeight: '500',
+                fontSize: "22px",
+                fontFamily: "Georgia, 'Times New Roman', Times, serif",
+                fontStyle: "italic",
+                lineHeight: "1.6"
+              }}>
+              "Elevate your library experience. Manage collections, track members, and handle borrowings with a seamless interface."
             </p>
+
             <div className="d-flex justify-content-center">
-              <Link to="/books" className="btn btn-warning btn-lg px-4 px-md-5 fw-bold shadow rounded-pill">
+              <Link to="/books"
+                className="btn btn-warning btn-lg px-4 px-md-5 fw-bold shadow rounded-pill"
+                style={{ fontFamily: "inherit", letterSpacing: "0.5px" }}>
                 Explore Collection
               </Link>
             </div>
