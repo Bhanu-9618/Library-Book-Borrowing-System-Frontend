@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard';
 import Books from './pages/Books';
 import Users from './pages/Users';
 import Rent from './pages/Rent';
+import RentHistory from './pages/RentHistory';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/books" element={<Books />} />
           <Route path="/users" element={<Users />} />
           <Route path="/rent" element={<Rent />} />
+          <Route path="/history" element={<RentHistory />} />
         </Routes>
       </div>
       <ToastContainer position="top-right" autoClose={3000} />
