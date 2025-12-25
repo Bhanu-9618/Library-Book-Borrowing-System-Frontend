@@ -6,7 +6,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
-  
+
   const initialForm = { name: '', email: '', phone: '', address: '', membershipdate: '' };
   const [formData, setFormData] = useState(initialForm);
 
@@ -109,12 +109,12 @@ const Users = () => {
                     <tr key={user.id}>
                       <td className="px-4 py-3">
                         <div className="d-flex align-items-center">
-                          <div className="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style={{width: '40px', height: '40px'}}>
+                          <div className="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style={{ width: '40px', height: '40px' }}>
                             {user.name.charAt(0).toUpperCase()}
                           </div>
                           <div>
                             <div className="fw-bold">{user.name}</div>
-                            <div className="text-muted" style={{fontSize: '0.75rem'}}>Address: {user.address || 'N/A'}</div>
+                            <div className="text-muted" style={{ fontSize: '0.75rem' }}>Address: {user.address || 'N/A'}</div>
                           </div>
                         </div>
                       </td>
