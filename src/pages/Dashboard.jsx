@@ -25,8 +25,8 @@ const Dashboard = () => {
             <h1 className="display-6 display-md-3 fw-bold mb-3">
               Welcome to <span className="text-warning">LibManager</span>
             </h1>
-            <p className="fs-6 fs-md-4 mb-4 mx-auto opacity-90" style={{ maxWidth: '750px', lineHeight: '1.4' }}>
-              Elevate your library experience. Manage collections, track members, and handle borrowings with a seamless interface.
+            <p className=" mb-4 mx-auto opacity-90" style={{ maxWidth: '700px',  fontWeight: 'bold' , fontSize : "20px" , fontFamily : "cursive" }}>
+              " Elevate your library experience. Manage collections, track members, and handle borrowings with a seamless interface."
             </p>
             <div className="d-flex justify-content-center">
               <Link to="/books" className="btn btn-warning btn-lg px-4 px-md-5 fw-bold shadow rounded-pill">
@@ -36,6 +36,65 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+
+      <div className="container" style={{ marginTop: '-60px', position: 'relative', zIndex: 3 }}>
+        <div className="row g-4 justify-content-center">
+          
+          <div className="col-12 col-lg-3 col-md-6">
+            <div className="card border-0 shadow-sm rounded-4 p-3 h-100 text-center bg-white">
+              <div className="card-body d-flex flex-column align-items-center">
+                <div className="bg-primary bg-opacity-10 p-3 rounded-circle mb-3">
+                  <span className="fs-2">📚</span>
+                </div>
+                <h3 className="fw-bold h5 mb-2">Manage Books</h3>
+                <p className="text-muted small mb-4">Add new arrivals or curate your digital shelves.</p>
+                <Link to="/books" className="btn btn-dark mt-auto w-100 rounded-pill py-2">Open Inventory</Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 col-lg-3 col-md-6">
+            <div className="card border-0 shadow-sm rounded-4 p-3 h-100 text-center bg-white">
+              <div className="card-body d-flex flex-column align-items-center">
+                <div className="bg-success bg-opacity-10 p-3 rounded-circle mb-3">
+                  <span className="fs-2">👥</span>
+                </div>
+                <h3 className="fw-bold h5 mb-2">Manage Users</h3>
+                <p className="text-muted small mb-4">Register new members and track profiles.</p>
+                <Link to="/users" className="btn btn-dark mt-auto w-100 rounded-pill py-2">View Members</Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 col-lg-3 col-md-6">
+            <div className="card border-0 shadow-sm rounded-4 p-3 h-100 text-center bg-white">
+              <div className="card-body d-flex flex-column align-items-center">
+                <div className="bg-warning bg-opacity-10 p-3 rounded-circle mb-3">
+                  <span className="fs-2">🔄</span>
+                </div>
+                <h3 className="fw-bold h5 mb-2">Rent & Return</h3>
+                <p className="text-muted small mb-4">Monitor due dates and manage returns effortlessly.</p>
+                <Link to="/rent" className="btn btn-dark mt-auto w-100 rounded-pill py-2">Rent Books</Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 col-lg-3 col-md-6">
+            <div className="card border-0 shadow-sm rounded-4 p-3 h-100 text-center bg-white">
+              <div className="card-body d-flex flex-column align-items-center">
+                <div className="bg-info bg-opacity-10 p-3 rounded-circle mb-3">
+                  <span className="fs-2">📊</span>
+                </div>
+                <h3 className="fw-bold h5 mb-2">Rent History</h3>
+                <p className="text-muted small mb-4">View all book rental history.</p>
+                <Link to="/history" className="btn btn-dark mt-auto w-100 rounded-pill py-2">View History</Link>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div className="py-5"></div>
     </div>
   );
 };

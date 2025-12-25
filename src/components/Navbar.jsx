@@ -23,16 +23,16 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-center gap-2">
             <li className="nav-item">
-              <NavLink className="nav-link px-3" to="/">Home</NavLink>
+              <NavLink className="nav-link px-3" style={{fontWeight : "bold"}} to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link px-3" to="/books">Books</NavLink>
+              <NavLink className="nav-link px-3" style={{fontWeight : "bold"}}  to="/books">Books</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link px-3" to="/users">Users</NavLink>
+              <NavLink className="nav-link px-3"style={{fontWeight : "bold"}}  to="/users">Users</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link px-3" to="/history">History</NavLink>
+              <NavLink className="nav-link px-3"style={{fontWeight : "bold"}}  to="/history">History</NavLink>
             </li>
             <li className="nav-item ms-lg-3">
               <NavLink 
