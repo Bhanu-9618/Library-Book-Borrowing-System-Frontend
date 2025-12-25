@@ -3,7 +3,8 @@ import './App.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
-import Books from './pages/Books';
+import Books from './pages/Books';  
+import Users from './pages/Users';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/books" element={<Books />} />
+            <Route path="/users" element={<Users />} />
           </Routes>
         </div>
       </div>
