@@ -86,6 +86,10 @@ const Rent = () => {
                                     <span className="fw-bold">#{formData.bookid || '---'}</span>
                                 </div>
                                 <div className="d-flex justify-content-between border-bottom pb-2">
+                                    <span className="text-muted small">Due Date</span>
+                                    <span className="fw-bold">{formData.dueDate || '---'}</span>
+                                </div>
+                                <div className="d-flex justify-content-between border-bottom pb-2">
                                     <span className="text-muted small">Status</span>
                                     <span className="badge bg-success-subtle text-success rounded-pill px-3">{formData.status}</span>
                                 </div>
@@ -93,9 +97,6 @@ const Rent = () => {
                             <div className="mt-3 pt-4 text-center">
                                 <p className="x-small text-muted mb-0 opacity-75">
                                     "Happy Reading! We're glad you're part of the LibManager community. Enjoy your book!"
-                                </p>
-                                <p className="x-small text-muted mb-0 opacity-75 mt-4">
-                                    Please ensure the book is returned by the due date to avoid late fees.
                                 </p>
                             </div>
                         </div>
