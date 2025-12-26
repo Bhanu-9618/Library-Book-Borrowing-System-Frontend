@@ -136,6 +136,7 @@ const Books = () => {
             </div>
 
             <div className="card border-0 shadow-sm rounded-4 overflow-hidden">
+                <div className='table-responsive'>
                 <table className="table table-hover align-middle mb-0">
                     <thead className="bg-light">
                         <tr>
@@ -169,6 +170,7 @@ const Books = () => {
                         ))}
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     );
