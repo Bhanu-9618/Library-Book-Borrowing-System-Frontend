@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://library-book-borrowing-system-backend-production.up.railway.app";
 
 export const getAllBooks = () => axios.get(`${BASE_URL}/book/all`);
 export const saveBook = (book) => axios.post(`${BASE_URL}/book/save`, book);
