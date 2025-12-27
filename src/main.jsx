@@ -8,7 +8,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Library-Book-Borrowing-System-Frontend">
     <App />
     </BrowserRouter>
   </StrictMode>,
