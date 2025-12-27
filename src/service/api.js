@@ -1,16 +1,18 @@
 import axios from 'axios';
 
-const BASE_URL = "https://library-book-borrowing-system-backend-production.up.railway.app";
+const api = axios.create({
+  baseURL: "https://library-book-borrowing-system-backend-production-dcfd.up.railway.app"
+});
 
-export const getAllBooks = () => axios.get(`${BASE_URL}/book/all`);
-export const saveBook = (book) => axios.post(`${BASE_URL}/book/save`, book);
-export const updateBook = (book) => axios.put(`${BASE_URL}/book/update`, book);
-export const deleteBook = (id) => axios.delete(`${BASE_URL}/book/delete/${id}`);
-export const getBookById = (id) => axios.get(`${BASE_URL}/book/id/${id}`);
+export const getAllBooks = () => api.get('/book/all');
+export const saveBook = (book) => api.post('/book/save', book);
+export const updateBook = (book) => api.put('/book/update', book);
+export const deleteBook = (id) => api.delete(`/book/delete/${id}`);
+export const getBookById = (id) => api.get(`/book/id/${id}`);
 
-export const getAllUsers = () => axios.get(`${BASE_URL}/user/all`);
-export const saveUser = (user) => axios.post(`${BASE_URL}/user/save`, user);
+export const getAllUsers = () => api.get('/user/all');
+export const saveUser = (user) => api.post('/user/save', user);
 
-export const saveBorrow = (borrow) => axios.post(`${BASE_URL}/borrow/save`, borrow);
-export const getRenthistory = () => axios.get(`${BASE_URL}/borrow/all`);
-export const updateBorrowStatus = (updateData) => axios.put(`${BASE_URL}/borrow/update`, updateData);
+export const saveBorrow = (borrow) => api.post('/borrow/save', borrow);
+export const getRenthistory = () => api.get('/borrow/all');
+export const updateBorrowStatus = (updateData) => api.put('/borrow/update', updateData);
