@@ -1,15 +1,31 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Navbar from './components/Navbar';
+import Dashboard from './pages/Dashboard';
+import Books from './pages/Books';
+import Users from './pages/Users';
+import Rent from './pages/Rent';
+import RentHistory from './pages/RentHistory';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-     
-    </>
+    <div className="app-container">
+      <Navbar />
+      <div className="content-wrap">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/rent" element={<Rent />} />
+          <Route path="/history" element={<RentHistory />} />
+        </Routes>
+      </div>
+      <ToastContainer position="top-right" autoClose={3000} />
+    </div>
   )
 }
 
