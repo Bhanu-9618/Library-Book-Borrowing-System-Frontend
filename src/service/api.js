@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://library-book-borrowing-system-backend-production-dcfd.up.railway.app"
+  baseURL: "https://library-book-borrowing-system-backend-production.up.railway.app"
 });
 
 export const getAllBooks = () => api.get('/book/all');
