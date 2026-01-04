@@ -1,12 +1,18 @@
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+
+  const handleLogout = () => {
+    localStorage.removeItem("isAdminAuthenticated");
+    navigate('/login');
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm px-3"
       style={{ background: 'rgba(33, 37, 41, 0.95)', backdropFilter: 'blur(8px)' }}>
       <div className="container">
 
-        <Link className="navbar-brand fw-bold fs-4 d-flex align-items-center" to="/">
+        <Link className="navbar-brand fw-bold fs-4 d-flex align-items-center" to="/dashboard">
           <span className="text-warning">Lib</span>Manager
         </Link>
 
@@ -22,7 +28,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-center gap-2">
             <li className="nav-item">
-              <NavLink className="nav-link px-3" style={{ fontWeight: "bold" }} to="/">Home</NavLink>
+              <NavLink className="nav-link px-3" style={{ fontWeight: "bold" }} to="/dashboard">Home</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link px-3" style={{ fontWeight: "bold" }} to="/books">Books</NavLink>
@@ -39,6 +45,15 @@ const Navbar = () => {
                 to="/rent"
               >
                 Rent Book
+              </NavLink>
+            </li>
+            <li className="nav-item ms-lg-3">
+              <NavLink
+                className="btn btn-warning rounded-pill px-4 fw-bold shadow-sm"
+                to="/rent"
+                onClick={handleLogout}
+              >
+                Log Out
               </NavLink>
             </li>
           </ul>

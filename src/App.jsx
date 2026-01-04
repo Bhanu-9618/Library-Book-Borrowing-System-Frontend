@@ -1,32 +1,47 @@
-import { useState } from 'react'
-import './App.css'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import ProtectedRoute from './components/ProtectedRoute';
 import Books from './pages/Books';
-import Users from './pages/Users';
 import Rent from './pages/Rent';
 import RentHistory from './pages/RentHistory';
+import Users from './pages/Users';
 
 function App() {
-
   return (
-    <div className="app-container">
-      <Navbar />
-      <div className="content-wrap">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/books" element={<Books />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/rent" element={<Rent />} />
-          <Route path="/history" element={<RentHistory />} />
-        </Routes>
-      </div>
-      <ToastContainer position="top-right" autoClose={3000} />
-    </div>
-  )
+    <>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        } />
+        <Route path="/books" element={
+          <ProtectedRoute>
+            <Books />
+          </ProtectedRoute>
+        } />
+        <Route path="/rent" element={
+          <ProtectedRoute>
+            <Rent />
+          </ProtectedRoute>
+        } />
+        <Route path="/history" element={
+          <ProtectedRoute>
+            <RentHistory />
+          </ProtectedRoute>
+        } />
+        <Route path="/users" element={
+          <ProtectedRoute>
+            <Users />
+          </ProtectedRoute>
+        } />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
