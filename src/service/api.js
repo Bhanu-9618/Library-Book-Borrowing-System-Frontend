@@ -12,7 +12,13 @@ export const getBookById = (id) => api.get(`/book/id/${id}`);
 
 export const getAllUsers = () => api.get('/user/all');
 export const saveUser = (user) => api.post('/user/save', user);
+export const updateUser = (user) => api.put('/user/update', user);
+export const deleteUser = (id) => api.delete(`/user/delete/${id}`);
+export const searchUsers = (term) => api.get(`/user/search/${term}`);
 
 export const saveBorrow = (borrow) => api.post('/borrow/save', borrow);
 export const getRenthistory = () => api.get('/borrow/all');
 export const updateBorrowStatus = (updateData) => api.put('/borrow/update', updateData);
+export const searchBorrows = (borrow) => api.get(`/borrow/search/${borrow}`);
+
+export const login = (login) => api.post('/auth/login', login);
