@@ -21,7 +21,6 @@ const Login = () => {
                 toast.success("Access Granted");
                 navigate('/dashboard');
             } else {
-                // Password එක හෝ Email එක වැරදි වුණොත් මෙන්න මේ alert එක පෙන්වනවා
                 alert("Invalid Credentials! Please check your email and password.");
                 toast.error("Invalid Credentials");
             }
